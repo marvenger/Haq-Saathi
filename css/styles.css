@@ -1,0 +1,39 @@
+:root{--bg:#f4f8f5;--ink:#15302f;--mut:#4f625f;--card:#fff;--line:#cfdcd5;--pri:#0f5c5c;--on:#fff;--acc:#f2b01e;--bad:#a8231b;--badbg:#fdeceb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1b1a;--ink:#e6f0ed;--mut:#9cb3ae;--card:#152826;--line:#274542;--pri:#5fc4b8;--on:#06201d;--bad:#ff9d94;--badbg:#3a1f1d}}
+:root[data-theme="dark"]{--bg:#0d1b1a;--ink:#e6f0ed;--mut:#9cb3ae;--card:#152826;--line:#274542;--pri:#5fc4b8;--on:#06201d;--bad:#ff9d94;--badbg:#3a1f1d}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:18px/1.6 Mukta,"Noto Sans Devanagari",system-ui,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;max-width:760px;margin:auto}
+.logo{font:24px Yatra One,serif;color:var(--pri)}
+button{font:inherit;cursor:pointer;color:inherit}
+button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.lang{border:2px solid var(--pri);background:none;border-radius:99px;padding:4px 16px;min-height:44px;color:var(--pri);font-weight:600}
+main{max-width:760px;margin:auto;padding:0 18px 28px}
+h1{font:34px/1.25 Yatra One,serif;margin:8px 0}h2{font:26px Yatra One,serif;margin:6px 0}h3{font-size:18px;margin:22px 0 8px}
+.sub{color:var(--mut);margin:0 0 14px}
+.ask{display:flex;gap:10px;align-items:stretch;margin:16px 0 8px}
+textarea,input{width:100%;font:inherit;padding:12px;border:2px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink)}
+textarea{min-height:92px;resize:vertical}
+.mic{flex:0 0 84px;border:0;border-radius:50%;width:84px;height:84px;background:var(--acc);font-size:34px;color:#222}
+.mic.live{animation:p 1s infinite}@keyframes p{50%{box-shadow:0 0 0 14px rgba(242,176,30,.3)}}
+@media(prefers-reduced-motion:reduce){.mic.live{animation:none}}
+.btn{background:var(--pri);color:var(--on);border:0;border-radius:12px;padding:12px 22px;min-height:52px;font-weight:600}
+.btn.alt{background:none;color:var(--pri);border:2px solid var(--pri)}
+.tiles{display:grid;gap:12px;margin-top:20px}
+.tile{display:flex;gap:14px;align-items:center;text-align:left;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px;min-height:76px}
+.tile i{font-style:normal;font-size:32px}.tile b{display:block}.tile span{color:var(--mut);font-size:16px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:8px 16px;min-height:48px}
+.opt.on{border-color:var(--pri);background:var(--pri);color:var(--on);font-weight:600}
+.note,.warn,.card{border-radius:14px;padding:14px 16px;margin:14px 0;background:var(--card);border:2px solid var(--line)}
+.warn{background:var(--badbg);border-color:var(--bad)}.warn b{color:var(--bad)}
+.draft{white-space:pre-wrap;font:inherit;background:var(--card);border:2px dashed var(--pri);border-radius:12px;padding:16px;margin:0}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);width:100%;background:none;border-left:0;border-right:0;border-top:0;text-align:left}
+.chk em{flex:0 0 28px;height:28px;border:2px solid var(--pri);border-radius:7px;display:grid;place-items:center;font-style:normal;font-weight:800}
+.chk.on em{background:var(--pri);color:var(--on)}
+.bar{height:14px;background:var(--line);border-radius:9px;overflow:hidden}.bar div{height:100%;background:var(--pri)}
+.back{background:none;border:0;color:var(--pri);font-weight:600;padding:8px 0;min-height:44px}
+.row{margin:14px 0}.src{color:var(--mut);font-size:15px}
+footer{max-width:760px;margin:auto;padding:0 18px 24px;color:var(--mut);font-size:15px}
+@media print{header,footer,.back,.noprint{display:none!important}}
+.verdict{font:22px Yatra One,serif;margin:0 0 6px}.flag{margin:6px 0}

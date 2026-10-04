@@ -1,0 +1,3 @@
+{ "name": "haq-saathi", "version": "1.0.0", "private": true, "license": "MIT",
+  "description": "Voice-first investor protection companion for Bharat. No advice, no tracking.",
+  "scripts": { "start": "npx serve .", "test": "node tests/guardrails.test.js" } }
